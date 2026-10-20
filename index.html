@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Romantic Letter For You</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Caveat:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <canvas id="particle-canvas"></canvas>
+
+  <div class="ambient-glow"></div>
+
+  <main class="scene-container">
+    <header class="scene-header" id="scene-header">
+      <h1 class="catchy-title font-cursive">A letter from my heart </h1>
+      <p class="catchy-subtitle font-serif-romantic">written just for you</p>
+    </header>
+
+    <div class="perspective-container">
+
+      <div id="envelope" class="envelope-wrapper pulse-ambient">
+
+        <div class="envelope-back">
+          <div class="envelope-back-pattern"></div>
+          <div class="envelope-back-shadow"></div>
+        </div>
+
+
+        <div id="letter" class="letter-card">
+
+          <div class="letter-top-bar">
+            <div class="letter-accent-top">
+              <span class="accent-line"></span>
+              <i class="fa-solid fa-heart accent-heart"></i>
+              <span class="accent-line"></span>
+            </div>
+            <span class="page-indicator" id="pageIndicator">❤️</span>
+            <button class="letter-close-btn" id="btnCloseEnvelopeTop" title="Close & Re-seal Envelope"
+              aria-label="Close Envelope">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+
+          <div id="letter-content" class="letter-content letter-scroll">
+
+            <article class="letter-page active" data-page="1">
+              <h2 class="letter-salutation font-cursive">My Dear Tayeba ❤️,</h2>
+              <p class="letter-paragraph font-serif-romantic">
+                তোমাকে একটা কথা বলার ছিল। আসলে তোমার সঙ্গে কথা বলতে আমার ভালো লাগে, আর ধীরে ধীরে তোমাকে একটু অন্যভাবে
+                ভালো লাগতে শুরু করেছে। তোমাকে নিয়ে আমার মনে কিছু সুন্দর ভাবনাও আছে। জানি না তুমি আমাকে কীভাবে দেখো, তবে
+                কথাটা তোমাকে জানাতে চেয়েছিলাম। তোমার ওপর কোনো চাপ নেই, তুমি নিজের মতো করে ভেবে আমাকে জানাতে পারো।
+              </p>
+              <!-- <p class="letter-paragraph font-serif-romantic">
+                                Some people bring light into a room, but you somehow manage to bring peace.
+                            </p> -->
+
+              <div class="letter-sign-section">
+                <span class="letter-date">OCT • FOREVER</span>
+                <div class="letter-sign-box">
+                  <span class="letter-sign-text font-serif-romantic">Forever yours,</span>
+                  <span class="letter-sign font-cursive">Tasin ❤️</span>
+                </div>
+              </div>
+            </article>
+
+
+
+
+          </div>
+
+          <footer class="letter-footer">
+
+
+            <button class="nav-btn close-btn" id="btnCloseEnvelope" aria-label="Close and Re-seal envelope">
+              <i class="fa-solid fa-envelope"></i>
+              <span>Close</span>
+            </button>
+
+
+          </footer>
+
+        </div>
+
+        <div class="flap flap-left"></div>
+        <div class="flap flap-right"></div>
+        <div class="flap flap-bottom"></div>
+
+        <div id="top-flap" class="flap flap-top">
+          <div class="flap-top-overlay"></div>
+        </div>
+
+        <div id="wax-seal" class="wax-seal" role="button" aria-label="Open Letter">
+          <div class="wax-seal-inner">
+            <i class="fa-solid fa-heart"></i>
+          </div>
+        </div>
+
+      </div>
+
+      <p id="open-hint" class="open-hint font-serif-romantic">Tap the seal to open</p>
+
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
